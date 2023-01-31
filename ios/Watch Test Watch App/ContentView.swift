@@ -47,7 +47,7 @@ class Controller: NSObject, ObservableObject, WCSessionDelegate {
     private func toggleAsync() async {
         if started {
             session?.end()
-            started = false
+            DispatchQueue.main.async { self.started = false }
         } else {
             let healthStore = HKHealthStore()
             try? await healthStore.requestAuthorization(
@@ -57,8 +57,9 @@ class Controller: NSObject, ObservableObject, WCSessionDelegate {
             let configuration = HKWorkoutConfiguration()
             configuration.activityType = .other
             session = try? HKWorkoutSession(healthStore: healthStore, configuration: configuration)
+            session?.startActivity(with: Date())
             session?.pause()
-            started = true
+            DispatchQueue.main.async { self.started = true }
         }
     }
 
