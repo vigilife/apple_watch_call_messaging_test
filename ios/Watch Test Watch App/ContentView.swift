@@ -54,9 +54,7 @@ class Controller: NSObject, ObservableObject, WCSessionDelegate {
                 toShare: [],
                 read: [HKQuantityType.quantityType(forIdentifier: .heartRate)!]
             )
-            let configuration = HKWorkoutConfiguration()
-            configuration.activityType = .other
-            session = try? HKWorkoutSession(healthStore: healthStore, configuration: configuration)
+            session = try? HKWorkoutSession(healthStore: healthStore, configuration: HKWorkoutConfiguration())
             session?.startActivity(with: Date())
             session?.pause()
             DispatchQueue.main.async { self.started = true }
