@@ -15,7 +15,32 @@
 		0DD62D3A2989DE410058FE96 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD62D392989DE410058FE96 /* ContentView.swift */; };
 		0DD62D3C2989DE420058FE96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DD62D3B2989DE420058FE96 /* Assets.xcassets */; };
 		0DD62D3F2989DE420058FE96 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DD62D3E2989DE420058FE96 /* Preview Assets.xcassets */; };
+		0DD62D472989E0CA0058FE96 /* Watch Test Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0DD62D352989DE410058FE96 /* Watch Test Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0DD62D482989E0CA0058FE96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DB2D17F2989DDC700F7394B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DD62D342989DE410058FE96;
+			remoteInfo = "Watch Test Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0DD62D4A2989E0CA0058FE96 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				0DD62D472989E0CA0058FE96 /* Watch Test Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0DB2D1872989DDC700F7394B /* Apple Watch Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple Watch Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +82,7 @@
 				0DB2D1892989DDC700F7394B /* Apple Watch Test */,
 				0DD62D362989DE410058FE96 /* Watch Test Watch App */,
 				0DB2D1882989DDC700F7394B /* Products */,
+				0DD62D462989E0CA0058FE96 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +136,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		0DD62D462989E0CA0058FE96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,10 +153,12 @@
 				0DB2D1832989DDC700F7394B /* Sources */,
 				0DB2D1842989DDC700F7394B /* Frameworks */,
 				0DB2D1852989DDC700F7394B /* Resources */,
+				0DD62D4A2989E0CA0058FE96 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0DD62D492989E0CA0058FE96 /* PBXTargetDependency */,
 			);
 			name = "Apple Watch Test";
 			productName = "Apple Watch Test";
@@ -225,6 +260,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0DD62D492989E0CA0058FE96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DD62D342989DE410058FE96 /* Watch Test Watch App */;
+			targetProxy = 0DD62D482989E0CA0058FE96 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0DB2D1932989DDC800F7394B /* Debug */ = {
@@ -415,6 +458,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Watch-Test-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Watch Test";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Used to collect health data";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = dev.rexios.appleWatchTest4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -447,6 +491,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Watch-Test-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Watch Test";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Used to collect health data";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = dev.rexios.appleWatchTest4;
 				LD_RUNPATH_SEARCH_PATHS = (

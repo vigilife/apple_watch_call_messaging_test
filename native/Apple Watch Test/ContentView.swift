@@ -26,7 +26,7 @@ class Controller: NSObject, ObservableObject, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        count = message["count"] as! Int
+        DispatchQueue.main.async { count = message["count"] as! Int }
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {}
