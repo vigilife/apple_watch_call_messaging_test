@@ -11,6 +11,10 @@
 		0DB2D18D2989DDC700F7394B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB2D18C2989DDC700F7394B /* ContentView.swift */; };
 		0DB2D18F2989DDC800F7394B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DB2D18E2989DDC800F7394B /* Assets.xcassets */; };
 		0DB2D1922989DDC800F7394B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DB2D1912989DDC800F7394B /* Preview Assets.xcassets */; };
+		0DD62D382989DE410058FE96 /* Watch_TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD62D372989DE410058FE96 /* Watch_TestApp.swift */; };
+		0DD62D3A2989DE410058FE96 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD62D392989DE410058FE96 /* ContentView.swift */; };
+		0DD62D3C2989DE420058FE96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DD62D3B2989DE420058FE96 /* Assets.xcassets */; };
+		0DD62D3F2989DE420058FE96 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DD62D3E2989DE420058FE96 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,10 +23,25 @@
 		0DB2D18C2989DDC700F7394B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0DB2D18E2989DDC800F7394B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DB2D1912989DDC800F7394B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0DD62D352989DE410058FE96 /* Watch Test Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch Test Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DD62D372989DE410058FE96 /* Watch_TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watch_TestApp.swift; sourceTree = "<group>"; };
+		0DD62D392989DE410058FE96 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0DD62D3B2989DE420058FE96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0DD62D3E2989DE420058FE96 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0DD62D432989DE7D0058FE96 /* Apple-Watch-Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Apple-Watch-Test-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0DD62D442989DF080058FE96 /* Watch Test Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Watch Test Watch App.entitlements"; sourceTree = "<group>"; };
+		0DD62D452989DF0F0058FE96 /* Watch-Test-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Watch-Test-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0DB2D1842989DDC700F7394B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DD62D322989DE410058FE96 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				0DB2D1892989DDC700F7394B /* Apple Watch Test */,
+				0DD62D362989DE410058FE96 /* Watch Test Watch App */,
 				0DB2D1882989DDC700F7394B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				0DB2D1872989DDC700F7394B /* Apple Watch Test.app */,
+				0DD62D352989DE410058FE96 /* Watch Test Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,6 +72,7 @@
 		0DB2D1892989DDC700F7394B /* Apple Watch Test */ = {
 			isa = PBXGroup;
 			children = (
+				0DD62D432989DE7D0058FE96 /* Apple-Watch-Test-Info.plist */,
 				0DB2D18A2989DDC700F7394B /* Apple_Watch_TestApp.swift */,
 				0DB2D18C2989DDC700F7394B /* ContentView.swift */,
 				0DB2D18E2989DDC800F7394B /* Assets.xcassets */,
@@ -63,6 +85,27 @@
 			isa = PBXGroup;
 			children = (
 				0DB2D1912989DDC800F7394B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0DD62D362989DE410058FE96 /* Watch Test Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				0DD62D452989DF0F0058FE96 /* Watch-Test-Watch-App-Info.plist */,
+				0DD62D442989DF080058FE96 /* Watch Test Watch App.entitlements */,
+				0DD62D372989DE410058FE96 /* Watch_TestApp.swift */,
+				0DD62D392989DE410058FE96 /* ContentView.swift */,
+				0DD62D3B2989DE420058FE96 /* Assets.xcassets */,
+				0DD62D3D2989DE420058FE96 /* Preview Content */,
+			);
+			path = "Watch Test Watch App";
+			sourceTree = "<group>";
+		};
+		0DD62D3D2989DE420058FE96 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0DD62D3E2989DE420058FE96 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -87,6 +130,23 @@
 			productReference = 0DB2D1872989DDC700F7394B /* Apple Watch Test.app */;
 			productType = "com.apple.product-type.application";
 		};
+		0DD62D342989DE410058FE96 /* Watch Test Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DD62D422989DE420058FE96 /* Build configuration list for PBXNativeTarget "Watch Test Watch App" */;
+			buildPhases = (
+				0DD62D312989DE410058FE96 /* Sources */,
+				0DD62D322989DE410058FE96 /* Frameworks */,
+				0DD62D332989DE410058FE96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Watch Test Watch App";
+			productName = "Watch Test Watch App";
+			productReference = 0DD62D352989DE410058FE96 /* Watch Test Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +158,9 @@
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					0DB2D1862989DDC700F7394B = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					0DD62D342989DE410058FE96 = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -116,6 +179,7 @@
 			projectRoot = "";
 			targets = (
 				0DB2D1862989DDC700F7394B /* Apple Watch Test */,
+				0DD62D342989DE410058FE96 /* Watch Test Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +194,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0DD62D332989DE410058FE96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DD62D3F2989DE420058FE96 /* Preview Assets.xcassets in Resources */,
+				0DD62D3C2989DE420058FE96 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -139,6 +212,15 @@
 			files = (
 				0DB2D18D2989DDC700F7394B /* ContentView.swift in Sources */,
 				0DB2D18B2989DDC700F7394B /* Apple_Watch_TestApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DD62D312989DE410058FE96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DD62D3A2989DE410058FE96 /* ContentView.swift in Sources */,
+				0DD62D382989DE410058FE96 /* Watch_TestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,9 +349,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Apple Watch Test/Preview Content\"";
-				DEVELOPMENT_TEAM = 9V32CBSEFV;
+				DEVELOPMENT_TEAM = 6BUNA5JAX2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Apple-Watch-Test-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -280,7 +363,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.rexios.Apple-Watch-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.rexios.appleWatchTest4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -296,9 +379,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Apple Watch Test/Preview Content\"";
-				DEVELOPMENT_TEAM = 9V32CBSEFV;
+				DEVELOPMENT_TEAM = 6BUNA5JAX2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Apple-Watch-Test-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -309,11 +393,75 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.rexios.Apple-Watch-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.rexios.appleWatchTest4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0DD62D402989DE420058FE96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Watch Test Watch App/Watch Test Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Watch Test Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 6BUNA5JAX2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Watch-Test-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Watch Test";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = dev.rexios.appleWatchTest4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.rexios.appleWatchTest4.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		0DD62D412989DE420058FE96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Watch Test Watch App/Watch Test Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Watch Test Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 6BUNA5JAX2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Watch-Test-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Watch Test";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = dev.rexios.appleWatchTest4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.rexios.appleWatchTest4.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Release;
 		};
@@ -334,6 +482,15 @@
 			buildConfigurations = (
 				0DB2D1962989DDC800F7394B /* Debug */,
 				0DB2D1972989DDC800F7394B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DD62D422989DE420058FE96 /* Build configuration list for PBXNativeTarget "Watch Test Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DD62D402989DE420058FE96 /* Debug */,
+				0DD62D412989DE420058FE96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
