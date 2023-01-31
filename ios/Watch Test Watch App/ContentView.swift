@@ -16,33 +16,49 @@ struct ContentView: View {
         Button(action: controller.toggle) {
             Text(controller.started ? "Stop" : "Start")
         }
+        TimelineView(PeriodicTimelineSchedule(from: Date(), by: 1)) { _ in
+            Text("\(controller.count)")
+        }
     }
 }
 
 class Controller: NSObject, ObservableObject, WCSessionDelegate {
     @Published var started = false
+    @Published var count = 0
     var session: HKWorkoutSession?
-    var count = 0
 
     override init() {
         super.init()
-        WCSession.default.activate()
         WCSession.default.delegate = self
+        WCSession.default.activate()
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: send)
     }
 
     func send(timer: Timer) {
-        WCSession.default.sendMessage(["message": count += 1], replyHandler: nil)
+        count += 1
+        print("sending \(count)")
+        WCSession.default.sendMessage(["count": count], replyHandler: nil)
     }
 
     func toggle() {
+        Task { await toggleAsync() }
+    }
+
+    private func toggleAsync() async {
         if started {
             session?.end()
-            session?.associatedWorkoutBuilder().discardWorkout()
+            started = false
         } else {
-            session = try? HKWorkoutSession(healthStore: HKHealthStore(), configuration: HKWorkoutConfiguration())
-            session?.startActivity(with: Date())
+            let healthStore = HKHealthStore()
+            try? await healthStore.requestAuthorization(
+                toShare: [],
+                read: [HKQuantityType.quantityType(forIdentifier: .heartRate)!]
+            )
+            let configuration = HKWorkoutConfiguration()
+            configuration.activityType = .other
+            session = try? HKWorkoutSession(healthStore: healthStore, configuration: configuration)
             session?.pause()
+            started = true
         }
     }
 

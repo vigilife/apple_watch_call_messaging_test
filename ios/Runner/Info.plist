@@ -48,6 +48,6 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>WKAppBundleIdentifier</key>
-	<string>com.example.appleWatchTest.watchkitapp</string>
+	<string>com.example.appleWatchTest3.watchkitapp</string>
 </dict>
 </plist>

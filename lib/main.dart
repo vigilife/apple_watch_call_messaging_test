@@ -13,23 +13,22 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  final messages = <String>[];
+  var count = 0;
 
   _AppState() {
     WatchConnectivity().messageStream.listen(_handleMessage);
   }
 
   void _handleMessage(Map<String, dynamic> message) {
-    setState(() => messages.add(message['message']));
+    setState(() => count = message['count']);
   }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: ListView.builder(
-          itemCount: messages.length,
-          itemBuilder: (context, index) => Text(messages[index]),
+        body: Center(
+          child: Text('$count'),
         ),
       ),
     );

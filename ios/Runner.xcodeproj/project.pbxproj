@@ -11,6 +11,7 @@
 		0D7B78392989C0FD00EC8A11 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B78382989C0FD00EC8A11 /* ContentView.swift */; };
 		0D7B783B2989C0FE00EC8A11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D7B783A2989C0FE00EC8A11 /* Assets.xcassets */; };
 		0D7B783E2989C0FE00EC8A11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D7B783D2989C0FE00EC8A11 /* Preview Assets.xcassets */; };
+		0DB2D1792989CD8700F7394B /* Watch Test Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0D7B78342989C0FD00EC8A11 /* Watch Test Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		345BEE730B4055AACBDBFBEE /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC23D47A8531679CB6682333 /* Pods_Runner.framework */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
@@ -20,7 +21,28 @@
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0DB2D17A2989CD8700F7394B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D7B78332989C0FD00EC8A11;
+			remoteInfo = "Watch Test Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
+		0DB2D17C2989CD8700F7394B /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				0DB2D1792989CD8700F7394B /* Watch Test Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9705A1C41CF9048500538489 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -39,6 +61,8 @@
 		0D7B78382989C0FD00EC8A11 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0D7B783A2989C0FE00EC8A11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D7B783D2989C0FE00EC8A11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0DB2D1782989C93300F7394B /* Watch Test Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Watch Test Watch App.entitlements"; sourceTree = "<group>"; };
+		0DB2D17D2989D31300F7394B /* Watch-Test-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Watch-Test-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
@@ -80,6 +104,8 @@
 		0D7B78352989C0FD00EC8A11 /* Watch Test Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				0DB2D17D2989D31300F7394B /* Watch-Test-Watch-App-Info.plist */,
+				0DB2D1782989C93300F7394B /* Watch Test Watch App.entitlements */,
 				0D7B78362989C0FD00EC8A11 /* Watch_TestApp.swift */,
 				0D7B78382989C0FD00EC8A11 /* ContentView.swift */,
 				0D7B783A2989C0FE00EC8A11 /* Assets.xcassets */,
@@ -193,10 +219,12 @@
 				9705A1C41CF9048500538489 /* Embed Frameworks */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
 				9D650834C1F3423B98812ABB /* [CP] Embed Pods Frameworks */,
+				0DB2D17C2989CD8700F7394B /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0DB2D17B2989CD8700F7394B /* PBXTargetDependency */,
 			);
 			name = Runner;
 			productName = Runner;
@@ -357,6 +385,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0DB2D17B2989CD8700F7394B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D7B78332989C0FD00EC8A11 /* Watch Test Watch App */;
+			targetProxy = 0DB2D17A2989CD8700F7394B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		97C146FA1CF9000F007C117D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -388,6 +424,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "Watch Test Watch App/Watch Test Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Watch Test Watch App/Preview Content\"";
@@ -395,9 +432,11 @@
 				ENABLE_PREVIEWS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Watch-Test-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Watch Test";
+				INFOPLIST_KEY_LSApplicationCategoryType = NSHealthShareUsageDescription;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.example.appleWatchTest;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.example.appleWatchTest3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -405,7 +444,7 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.appleWatchTest.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.appleWatchTest3.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -429,6 +468,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "Watch Test Watch App/Watch Test Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Watch Test Watch App/Preview Content\"";
@@ -436,16 +476,18 @@
 				ENABLE_PREVIEWS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Watch-Test-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Watch Test";
+				INFOPLIST_KEY_LSApplicationCategoryType = NSHealthShareUsageDescription;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.example.appleWatchTest;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.example.appleWatchTest3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.appleWatchTest.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.appleWatchTest3.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -468,6 +510,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "Watch Test Watch App/Watch Test Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Watch Test Watch App/Preview Content\"";
@@ -475,16 +518,18 @@
 				ENABLE_PREVIEWS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Watch-Test-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Watch Test";
+				INFOPLIST_KEY_LSApplicationCategoryType = NSHealthShareUsageDescription;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.example.appleWatchTest;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.example.appleWatchTest3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.appleWatchTest.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.appleWatchTest3.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -561,7 +606,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.appleWatchTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.appleWatchTest3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -691,7 +736,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.appleWatchTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.appleWatchTest3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -715,7 +760,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.appleWatchTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.appleWatchTest3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
