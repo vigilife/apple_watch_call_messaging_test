@@ -19,13 +19,15 @@ struct ContentView: View {
     }
 }
 
-class Controller: ObservableObject {
+class Controller: NSObject, ObservableObject, WCSessionDelegate {
     @Published var started = false
     var session: HKWorkoutSession?
     var count = 0
 
-    init() {
+    override init() {
+        super.init()
         WCSession.default.activate()
+        WCSession.default.delegate = self
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: send)
     }
 
@@ -43,4 +45,6 @@ class Controller: ObservableObject {
             session?.pause()
         }
     }
+
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {}
 }
