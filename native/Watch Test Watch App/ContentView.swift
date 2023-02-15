@@ -31,10 +31,10 @@ class Controller: NSObject, ObservableObject, WCSessionDelegate {
         super.init()
         WCSession.default.delegate = self
         WCSession.default.activate()
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: send)
+        Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: send)
     }
 
-    func send(timer: Timer) {
+    func send(timer _: Timer) {
         count += 1
         print("sending \(count)")
         WCSession.default.sendMessage(["count": count], replyHandler: nil)
@@ -61,5 +61,5 @@ class Controller: NSObject, ObservableObject, WCSessionDelegate {
         }
     }
 
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {}
+    func session(_: WCSession, activationDidCompleteWith _: WCSessionActivationState, error _: Error?) {}
 }

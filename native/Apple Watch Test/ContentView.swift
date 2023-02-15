@@ -10,7 +10,7 @@ import WatchConnectivity
 
 struct ContentView: View {
     @ObservedObject var controller = Controller()
-    
+
     var body: some View {
         Text("\(controller.count)")
     }
@@ -18,18 +18,18 @@ struct ContentView: View {
 
 class Controller: NSObject, ObservableObject, WCSessionDelegate {
     @Published var count = 0
-    
+
     override init() {
         super.init()
         WCSession.default.delegate = self
         WCSession.default.activate()
     }
-    
-    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+
+    func session(_: WCSession, didReceiveMessage message: [String: Any]) {
         DispatchQueue.main.async { self.count = message["count"] as! Int }
     }
-    
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {}
-    func sessionDidBecomeInactive(_ session: WCSession) {}
-    func sessionDidDeactivate(_ session: WCSession) {}
+
+    func session(_: WCSession, activationDidCompleteWith _: WCSessionActivationState, error _: Error?) {}
+    func sessionDidBecomeInactive(_: WCSession) {}
+    func sessionDidDeactivate(_: WCSession) {}
 }

@@ -435,6 +435,7 @@
 				INFOPLIST_FILE = "Watch-Test-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Watch Test";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Used to collect health data";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Used to write health data";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.example.appleWatchTest3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -479,6 +480,7 @@
 				INFOPLIST_FILE = "Watch-Test-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Watch Test";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Used to collect health data";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Used to write health data";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.example.appleWatchTest3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -521,6 +523,7 @@
 				INFOPLIST_FILE = "Watch-Test-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Watch Test";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Used to collect health data";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Used to write health data";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.example.appleWatchTest3;
 				LD_RUNPATH_SEARCH_PATHS = (
