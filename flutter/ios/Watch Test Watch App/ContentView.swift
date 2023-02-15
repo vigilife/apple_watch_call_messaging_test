@@ -31,7 +31,7 @@ class Controller: NSObject, ObservableObject, WCSessionDelegate {
         super.init()
         WCSession.default.delegate = self
         WCSession.default.activate()
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: send)
+        Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: send)
     }
 
     func send(timer _: Timer) {
